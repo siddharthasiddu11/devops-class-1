@@ -9,7 +9,7 @@ jobs:
     name: Redeploy frontend to staging cluster
     steps:
        - run: |
-          echo ${{ secrets.SSH_PRIVATE_KEY }} &> ~/ssh_key
+          echo "${{ secrets.SSH_PRIVATE_KEY }}"" &> ~/ssh_key
           ssh -i ~/ssh_key root@64.225.145.126
           cd devops-class25.2/ && git pull
           pnpm install
