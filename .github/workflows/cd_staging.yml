@@ -5,6 +5,7 @@ on:
       - "main"
 jobs:
   redeploy_everything:
+    runs-on: ubuntu-latest
     name: Redeploy frontend to staging cluster
     
     steps:
